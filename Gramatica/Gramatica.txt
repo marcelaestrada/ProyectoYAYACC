@@ -1,3 +1,4 @@
+Principales' -> Principales
 Principales -> Principal Principales 
 Principales -> ''
 Principal -> NoTerminal : Agrupado ;
@@ -47,3 +48,7 @@ Diccionario -> { F
 Diccionario -> | F
 Diccionario -> } F
 Diccionario -> ~ F
+Diccionario -> \n F
+Diccionario -> \t F
+Diccionario -> \\ F
+Diccionario -> \' F
