@@ -1,0 +1,49 @@
+Principales -> Principal Principales 
+Principales -> ''
+Principal -> NoTerminal : Agrupado ;
+Principal -> ''
+Agrupado -> PuedeVenir
+Agrupado -> PuedeVenir | Agrupado
+PuedeVenir -> NoTerminal TerminalNoTerminal
+PuedeVenir -> Terminal TerminalNoTerminal
+TerminalNoTerminal -> NoTerminal TerminalNoTerminal
+TerminalNoTerminal -> Terminal TerminalNoTerminal 
+TerminalNoTerminal -> ''
+NoTerminal -> [a-z] T
+NoTerminal -> [A-Z] T
+NoTerminal -> _ T
+NoTerminal -> - T
+NoTerminal -> ''
+T -> [0-9] T
+T -> NoTerminal 
+T -> ''
+Terminal -> ' F '
+F -> Diccionario
+F -> ''
+Diccionario -> ! F 
+Diccionario -> " F
+Diccionario -> # F
+Diccionario -> % F
+Diccionario -> & F
+Diccionario -> ( F
+Diccionario -> ) F
+Diccionario -> * F
+Diccionario -> + F
+Diccionario -> , F
+Diccionario -> - F
+Diccionario -> . F
+Diccionario -> / F
+Diccionario -> : F
+Diccionario -> ; F
+Diccionario -> < F
+Diccionario -> = F
+Diccionario -> > F
+Diccionario -> ? F
+Diccionario -> [ F
+Diccionario -> ] F
+Diccionario -> ^ F
+Diccionario -> _ F
+Diccionario -> { F
+Diccionario -> | F
+Diccionario -> } F
+Diccionario -> ~ F
