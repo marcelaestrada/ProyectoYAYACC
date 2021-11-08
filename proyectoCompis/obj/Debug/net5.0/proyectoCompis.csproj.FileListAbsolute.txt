@@ -1,0 +1,16 @@
+D:\Documentos\URL\proyectoCompis\obj\Debug\net5.0\proyectoCompis.csproj.AssemblyReference.cache
+D:\Documentos\URL\proyectoCompis\obj\Debug\net5.0\proyectoCompis.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\URL\proyectoCompis\obj\Debug\net5.0\proyectoCompis.AssemblyInfoInputs.cache
+D:\Documentos\URL\proyectoCompis\obj\Debug\net5.0\proyectoCompis.AssemblyInfo.cs
+D:\Documentos\URL\proyectoCompis\obj\Debug\net5.0\proyectoCompis.csproj.CoreCompileInputs.cache
+D:\Documentos\URL\proyectoCompis\bin\Debug\net5.0\proyectoCompis.exe
+D:\Documentos\URL\proyectoCompis\bin\Debug\net5.0\proyectoCompis.deps.json
+D:\Documentos\URL\proyectoCompis\bin\Debug\net5.0\proyectoCompis.runtimeconfig.json
+D:\Documentos\URL\proyectoCompis\bin\Debug\net5.0\proyectoCompis.runtimeconfig.dev.json
+D:\Documentos\URL\proyectoCompis\bin\Debug\net5.0\proyectoCompis.dll
+D:\Documentos\URL\proyectoCompis\bin\Debug\net5.0\ref\proyectoCompis.dll
+D:\Documentos\URL\proyectoCompis\bin\Debug\net5.0\proyectoCompis.pdb
+D:\Documentos\URL\proyectoCompis\obj\Debug\net5.0\proyectoCompis.dll
+D:\Documentos\URL\proyectoCompis\obj\Debug\net5.0\ref\proyectoCompis.dll
+D:\Documentos\URL\proyectoCompis\obj\Debug\net5.0\proyectoCompis.pdb
+D:\Documentos\URL\proyectoCompis\obj\Debug\net5.0\proyectoCompis.genruntimeconfig.cache
