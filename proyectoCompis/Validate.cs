@@ -65,7 +65,7 @@ namespace proyectoCompis
                             {
                                 abierto = false;
                                 entero.Append(item);
-                                tokens.Add(new Token("lit", entero.ToString()));
+                                tokens.Add(new Token("Terminal", entero.ToString()));
                                 entero.Clear();
                             }
                             

@@ -46,7 +46,7 @@ namespace proyectoCompis
                             bool stop = false;
                             while (!stop)
                             {
-                                if (Char.IsLetter(peek) || peek.Equals('-') || peek.Equals('_'))
+                                if (Char.IsLetter(peek) || Char.IsNumber(peek) || peek.Equals('-') || peek.Equals('_'))
                                 {
                                     cadena.Append(peek);
                                 }
