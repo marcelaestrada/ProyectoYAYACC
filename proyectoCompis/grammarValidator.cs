@@ -52,11 +52,27 @@ namespace proyectoCompis
             {
                 case "NoTerminal":
                     NoTerminal();
-                    TerminalNoTerminal();
+                    if (tokens[_index].symbol == "|")
+                    {
+                        Match("|");
+                        Agrupado();
+                    }
+                    else
+                    {
+                        TerminalNoTerminal();
+                    }
                     break;
                 case "Terminal":
                     Terminal();
-                    TerminalNoTerminal();
+                    if (tokens[_index].symbol == "|")
+                    {
+                        Match("|");
+                        Agrupado();
+                    }
+                    else
+                    {
+                        TerminalNoTerminal();
+                    }
                     break;
                 case " ":
                     Match(" ");
