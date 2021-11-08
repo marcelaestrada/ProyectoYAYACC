@@ -38,7 +38,14 @@ namespace proyectoCompis
                     Match("NoTerminal");
                     Match(":");
                     Agrupado();
-                    Match(";");
+                    if (tokens[_index].symbol != ";")
+                    {
+                        Agrupado();
+                    }
+                    else
+                    {
+                        Match(";");
+                    }
                     break;
                 case " ":
                     Match(" ");
@@ -91,6 +98,9 @@ namespace proyectoCompis
                 case "Terminal":
                     Terminal();
                     TerminalNoTerminal();
+                    break;
+                case "|":
+                    Match("|");
                     break;
                 case " ":
                     Match(" ");
