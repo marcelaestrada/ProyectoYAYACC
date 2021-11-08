@@ -43,8 +43,6 @@ namespace proyectoCompis
                             tokens.Add(new Token(result[0], result[1]));
                             cadena.Clear();
                         }
-                        
-
                         break;
 
 
