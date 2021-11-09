@@ -47,6 +47,10 @@ namespace proyectoCompis
                     else if (tokens[_index].symbol != ";")
                     {
                         Agrupado();
+                        if (_token == "EOF")
+                        {
+                            resultado = false;
+                        }
                     }
                     else if(tokens[_index].symbol == ";")
                     {
@@ -99,6 +103,7 @@ namespace proyectoCompis
                 case " ":
                     Match(" ");
                     break;
+                
                 default:
                     break;
             }

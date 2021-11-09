@@ -51,16 +51,39 @@ namespace proyectoCompis
                     break;
 
                     case ':':
-                        tokens.Add(Token.COLON);
+                        if (abierto)
+                        {
+                            entero.Append(item);
+                        }
+                        else
+                        {
+                            tokens.Add(Token.COLON);
+                        }
+                        
                         break;
                     
                        
                     case ';':
-                        tokens.Add(Token.SEMICOLON);
+                        if (abierto)
+                        {
+                            entero.Append(item);
+                        }
+                        else
+                        {
+                            tokens.Add(Token.SEMICOLON);
+                        }
+                        
                         break;
                     case '|':
-
-                        tokens.Add(Token.PIPE);
+                        if (abierto)
+                        {
+                            entero.Append(item);
+                        }
+                        else
+                        {
+                            tokens.Add(Token.PIPE);
+                        }
+                        
                         break;
                     case '\'':
                         if (Convert.ToChar(cadenaValidar.Substring((i+1),1)) == ' ' || Convert.ToChar(cadenaValidar.Substring((i + 1), 1)) == ';')
