@@ -23,11 +23,13 @@ namespace proyectoCompis
             {
                 case "NoTerminal":
                     Principal();
-                    Principales();
+                   // Principales();
                     break;
                 case " ":
                     Match("");
                     break;
+                
+                    
             }
         }
         public void Principal()
@@ -38,13 +40,26 @@ namespace proyectoCompis
                     Match("NoTerminal");
                     Match(":");
                     Agrupado();
-                    if (tokens[_index].symbol != ";")
+                    if (tokens[_index].symbol == ":")
+                    {
+                        resultado = false;
+                    }
+                    else if (tokens[_index].symbol != ";")
                     {
                         Agrupado();
                     }
-                    else
+                    else if(tokens[_index].symbol == ";")
                     {
                         Match(";");
+                        Principal();
+                        if (_token == "EOF")
+                        {
+                            resultado = false;
+                        }
+                    }
+                    else
+                    {
+                        resultado = false;
                     }
                     break;
                 case " ":
@@ -84,6 +99,8 @@ namespace proyectoCompis
                 case " ":
                     Match(" ");
                     break;
+                default:
+                    break;
             }
         }
 
@@ -104,6 +121,9 @@ namespace proyectoCompis
                     break;
                 case " ":
                     Match(" ");
+                    break;
+
+                default:
                     break;
             }
         }
@@ -126,6 +146,10 @@ namespace proyectoCompis
                 if (_index < tokens.Count)
                 {
                     _token = tokens[_index].symbol;
+                }
+                else
+                {
+                    _token = "EOF";
                 }
             }
             else
