@@ -44,7 +44,11 @@ namespace proyectoCompis
                             cadena.Clear();
                         }
                         break;
+                    case '\n':
 
+                        break;
+                    case '\t':
+                    break;
 
                     case ':':
                         tokens.Add(Token.COLON);
