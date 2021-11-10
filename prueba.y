@@ -1,1 +1,0 @@
-jaja8 : 'hola' como 'estas' | bien 'gracias' ; 
