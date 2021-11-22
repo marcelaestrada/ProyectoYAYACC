@@ -96,6 +96,7 @@ namespace proyectoCompis
             }
 
 
+            
             Console.WriteLine("Marce El listado se llama: estadosCol que contiene el nodo padre que es el nombre de la produccion y produce " +
                 "es la produccion que hace. Me hablas por cualquier cosa, suerte");
 
