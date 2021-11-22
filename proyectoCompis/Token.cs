@@ -24,7 +24,7 @@ namespace proyectoCompis
             this.param = param;
         }
 
-        public bool IsAtom() => symbol == "lit" || symbol == "set";
+        public bool IsAtom(Token item) => Token.SEMICOLON == item;
 
         public override string ToString() => param.Length == 0 ? String.Format("<{0}>", symbol) : String.Format("<{0}: {1}>", symbol, param);
 
