@@ -177,9 +177,7 @@ namespace proyectoCompis
 		}
 
 
-		/// <summary>
-		/// Adds a propogation to the propogation table
-		/// </summary>
+		
 		void AddPropogation(int nLR0SourceState, int nLR0SourceItem, int nLR0TargetState, int nLR0TargetItem)
 		{
 			while (m_lalrPropogations.Count <= nLR0SourceState)
@@ -198,9 +196,7 @@ namespace proyectoCompis
 			propogationList.Add(new LALRPropogation { LR0TargetState = nLR0TargetState, LR0TargetItem = nLR0TargetItem });
 		}
 
-		/// <summary>
-		/// Gets the ID for a particular LR0 Item
-		/// </summary>
+		
 		int GetLR0ItemID(LR0Item item)
 		{
 			int nItemID = 0;
@@ -217,9 +213,7 @@ namespace proyectoCompis
 		}
 
 
-		/// <summary>
-		/// Gets the ID for a particular LR1 Item
-		/// </summary>
+		
 		int GetLR1ItemID(LR1Item item)
 		{
 			int nItemID = 0;
@@ -236,9 +230,7 @@ namespace proyectoCompis
 		}
 
 
-		/// <summary>
-		/// Gets the ID for a particular LR0 State
-		/// </summary>
+		
 		int GetLR0StateID(HashSet<int> state, ref bool bAdded)
 		{
 			int nStateID = 0;
@@ -255,9 +247,7 @@ namespace proyectoCompis
 			return nStateID;
 		}
 
-		/// <summary>
-		/// takes a set of LR0 Items and Produces all of the LR0 Items that are reachable by substitution
-		/// </summary>
+		
 		HashSet<int> LR0Closure(HashSet<int> i)
 		{
 			HashSet<int> closed = new HashSet<int>();
@@ -295,9 +285,7 @@ namespace proyectoCompis
 			return closed;
 		}
 
-		/// <summary>
-		/// takes a set of LR1 Items (LR0 items with lookaheads) and produces all of those LR1 items reachable by substitution
-		/// </summary>
+		
 		HashSet<int> LR1Closure(HashSet<int> i)
 		{
 			HashSet<int> closed = new HashSet<int>();
@@ -353,9 +341,7 @@ namespace proyectoCompis
 			return closed;
 		}
 
-		/// <summary>
-		/// takes an LR0 state, and a tokenID, and produces the next state given the token and productions of the grammar
-		/// </summary>
+		
 		int GotoLR0(int nState, int nTokenID, ref bool bAdded, ref int nPrecedence)
 		{
 			HashSet<int> gotoLR0 = new HashSet<int>();
@@ -385,9 +371,7 @@ namespace proyectoCompis
 			}
 		}
 
-		/// <summary>
-		/// Generates all of the LR 0 Items
-		/// </summary>
+		
 		void GenerateLR0Items()
 		{
 			HashSet<int> startState = new HashSet<int>();
@@ -425,9 +409,7 @@ namespace proyectoCompis
 		}
 
 
-		/// <summary>
-		/// Computes the set of first terminals for each token in the grammar
-		/// </summary>
+		
 		void ComputeFirstSets()
 		{
 			int nCountTokens = m_nonterminals.Count + m_terminals.Count;
@@ -480,9 +462,7 @@ namespace proyectoCompis
 			while (bDidSomething);
 		}
 
-		/// <summary>
-		/// returns the set of terminals that are possible to see next given an arbitrary list of tokens
-		/// </summary>
+		
 		HashSet<int> First(List<int> tokens, int nTerminal)
 		{
 			HashSet<int> first = new HashSet<int>();
@@ -511,9 +491,7 @@ namespace proyectoCompis
 			return first;
 		}
 
-		/// <summary>
-		/// Initializes the propogation table, and initial state of the LALR table
-		/// </summary>
+		
 		void InitLALRTables()
 		{
 			int nLR0State = 0;
@@ -564,9 +542,7 @@ namespace proyectoCompis
 			}
 		}
 
-		/// <summary>
-		/// Calculates the states in the LALR table
-		/// </summary>
+		
 		void CalculateLookAheads()
 		{
 			bool bChanged;
@@ -606,9 +582,7 @@ namespace proyectoCompis
 			while (bChanged);
 		}
 
-		/// <summary>
-		/// Initializes the tokens for the grammar
-		/// </summary>
+		
 		void InitSymbols()
 		{
 			for (int nSymbol = 0; nSymbol < m_grammar.Tokens.Length; nSymbol++)
@@ -634,9 +608,7 @@ namespace proyectoCompis
 			}
 		}
 
-		/// <summary>
-		/// Converts an LR0 State to an LR0 Kernel consisting of only the 'initiating' LR0 Items in the state
-		/// </summary>
+		
 		public void ConvertLR0ItemsToKernels()
 		{
 			foreach (HashSet<int> lr0State in m_lr0States)
@@ -658,9 +630,7 @@ namespace proyectoCompis
 			}
 		}
 
-		/// <summary>
-		/// Helper function that returns true if the list of actions contains an action
-		/// </summary>
+	
 		bool ListContainsAction(List<Action> list, Action action)
 		{
 			foreach (Action listAction in list)
@@ -673,9 +643,7 @@ namespace proyectoCompis
 			return false;
 		}
 
-		/// <summary>
-		/// Generates the parse table given the lalr states, and grammar
-		/// </summary>
+		
 		void GenerateParseTable()
 		{
 			m_parseTable = new ParseTable();
@@ -772,11 +740,11 @@ namespace proyectoCompis
 						{
 							if (derv == Derivation.None && reduceActions.Count == 1)
 							{
-								Console.WriteLine("Error, shift-reduce conflict in grammar");
+								Console.WriteLine("Error");
 							}
 							else
 							{
-								Console.WriteLine("Error, reduce-reduce conflict in grammar");
+								Console.WriteLine("Error");
 							}
 							m_parseTable.Actions[nStateID, nToken + 1] = new Action { ActionType = ActionType.Error, ActionParameter = nToken };
 						}
@@ -789,9 +757,7 @@ namespace proyectoCompis
 			}
 		}
 
-		/// <summary>
-		/// helper function
-		/// </summary>
+		
 		void PopulateProductions()
 		{
 			int nPrecedence = 0;
@@ -807,9 +773,7 @@ namespace proyectoCompis
 			}
 		}
 
-		/// <summary>
-		/// constructor, construct parser table
-		/// </summary>
+		
 		public Parser(LALRNode grammar)
 		{
 			m_lrGotos = new List<int[]>();
