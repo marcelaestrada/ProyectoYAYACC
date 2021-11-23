@@ -235,6 +235,7 @@ namespace proyectoCompis
                     _input.Push("0");
                     _inputStack.Push("#");
                     _stateStack.Push(0);
+                    int contadorTokensEncontrados = 0;
                     for (int i = 0; i < _token.Length; i++)
                     {
                         for (int j = 0; j < grammar.Tokens.Length; j++)
@@ -242,8 +243,13 @@ namespace proyectoCompis
                             if (("'" + _token[i] + "'") == grammar.Tokens[j])
                             {
                                 _input.Push((j + 1).ToString());
+                                contadorTokensEncontrados++;
                             }
                         }
+                    }
+                    if (contadorTokensEncontrados < _token.Length)
+                    {
+                        error = true;
                     }
                     while ((!aceptado && !error))
                     {

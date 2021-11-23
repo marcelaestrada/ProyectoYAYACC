@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marce\\Desktop\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj": {}
+    "C:\\Users\\carlo\\Desktop\\Datos\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marce\\Desktop\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj": {
+    "C:\\Users\\carlo\\Desktop\\Datos\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marce\\Desktop\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj",
+        "projectUniqueName": "C:\\Users\\carlo\\Desktop\\Datos\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj",
         "projectName": "proyectoCompis",
-        "projectPath": "C:\\Users\\marce\\Desktop\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj",
-        "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marce\\Desktop\\ProyectoYAYACC\\proyectoCompis\\obj\\",
+        "projectPath": "C:\\Users\\carlo\\Desktop\\Datos\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj",
+        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carlo\\Desktop\\Datos\\ProyectoYAYACC\\proyectoCompis\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Program files\\Visual\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
