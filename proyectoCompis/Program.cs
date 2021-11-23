@@ -218,6 +218,74 @@ namespace proyectoCompis
             
             Debug.DumpParseTable(parser);
 
+            while (true)
+            {
+                Console.WriteLine("INPUT: ");
+                string input = Console.ReadLine();
+                Console.WriteLine(input);
+                string[] _token = input.Split(' ');
+
+                Array.Reverse(_token);
+                bool aceptado = false;
+                bool error = false;
+                Stack<int> _stateStack = new Stack<int>();
+                Stack<string> _input = new Stack<string>();
+                Stack<string> _inputStack = new Stack<string>();
+                _input.Push("0");
+                _inputStack.Push("#");
+                _stateStack.Push(0);
+                for (int i = 0; i < _token.Length; i++)
+                {
+                    for (int j = 0; j < grammar.Tokens.Length; j++)
+                    {
+                        if (("'" + _token[i] + "'") == grammar.Tokens[j])
+                        {
+                            _input.Push((j + 1).ToString());
+                        }
+                    }
+                }
+                while ((!aceptado && !error))
+                {
+                    int state = _stateStack.Peek();
+                    int _tokenActual = Convert.ToInt32(_input.Peek());
+                    string ActionParameter = parser.ParseTable.Actions[state, _tokenActual].ActionParameter.ToString();
+                    string ActionType = parser.ParseTable.Actions[state, _tokenActual].ActionType.ToString();
+                    if (ActionType == "Error")
+                    {
+                        error = true;
+                    }
+                    else if (ActionType == "Shift")
+                    {
+                        //SHIFT
+                        _stateStack.Push(Convert.ToInt32(ActionParameter));
+                        _inputStack.Push(_input.Pop());
+                    }
+                    else if (ActionType == "Reduce" && ActionParameter != "0")
+                    {
+                        //REDUCE
+                        for (int i = 0; i < parser.Productions[Convert.ToInt32(ActionParameter)].Right.Length; i++)
+                        {
+                            _inputStack.Pop();
+                            _stateStack.Pop();
+                        }
+                        _inputStack.Push((parser.Productions[Convert.ToInt32(ActionParameter)].Left + 1).ToString());
+                        _stateStack.Push(Convert.ToInt32(parser.ParseTable.Actions[Convert.ToInt32(_stateStack.Peek()), Convert.ToInt32(_inputStack.Peek())].ActionParameter));
+                    }
+                    else if (ActionType == "Reduce" && ActionParameter == "0")
+                    {
+                        aceptado = true;
+                    }
+                }
+
+                if (error)
+                {
+                    Console.WriteLine("ERROR DE PARSEO");
+                }
+                else if (aceptado)
+                {
+                    Console.WriteLine("CADENA ACEPTADA");
+                }
+            }
         }
     }
 } 
