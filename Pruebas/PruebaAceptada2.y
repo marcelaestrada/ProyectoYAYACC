@@ -1,4 +1,4 @@
-S : T | a T | 'palabra' ;
+S : T | 'a' T | 'palabra' ;
 
 T : F | 'otrapalabra' ;
 

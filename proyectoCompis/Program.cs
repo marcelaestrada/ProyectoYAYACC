@@ -213,6 +213,10 @@ namespace proyectoCompis
             grammar.PrecedenceGroups = listaPrecedencias.ToArray();
             #endregion
 
+            Parser parser = new Parser(grammar);
+
+            
+            Debug.DumpParseTable(parser);
 
         }
     }
