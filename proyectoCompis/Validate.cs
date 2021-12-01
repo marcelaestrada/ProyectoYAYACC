@@ -36,7 +36,11 @@ namespace proyectoCompis
                 switch (item)
                 {
                     case ' ':
-                        if (cadena.Length!=0)
+                        if (abierto)
+                        {
+                            entero.Append(item);
+                        }
+                        else if (cadena.Length!=0)
                         {
                             Scanner scanner = new Scanner(cadena.ToString());
                             string[] result =  scanner.GetToken();
@@ -110,8 +114,6 @@ namespace proyectoCompis
                         {
 
                            
-
-
 
                             if (abierto)
                             {

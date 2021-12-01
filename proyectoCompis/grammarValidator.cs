@@ -58,7 +58,7 @@ namespace proyectoCompis
                         Principal();
                         if (_token == "EOF")
                         {
-                            resultado = false;
+                            resultado = true;
                         }
                     }
                     else
