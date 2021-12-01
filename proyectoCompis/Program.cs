@@ -266,6 +266,7 @@ namespace proyectoCompis
                             //SHIFT
                             _stateStack.Push(Convert.ToInt32(ActionParameter));
                             _inputStack.Push(_input.Pop());
+                            Console.WriteLine("SHIFT " + state + " TOKEN " + grammar.Tokens[_tokenActual - 1]);
                         }
                         else if (ActionType == "Reduce" && ActionParameter != "0")
                         {
@@ -277,10 +278,12 @@ namespace proyectoCompis
                             }
                             _inputStack.Push((parser.Productions[Convert.ToInt32(ActionParameter)].Left + 1).ToString());
                             _stateStack.Push(Convert.ToInt32(parser.ParseTable.Actions[Convert.ToInt32(_stateStack.Peek()), Convert.ToInt32(_inputStack.Peek())].ActionParameter));
+                            Console.WriteLine("REDUCE ");
                         }
                         else if (ActionType == "Reduce" && ActionParameter == "0")
                         {
                             aceptado = true;
+                            Console.WriteLine("ACCEPT");
                         }
                     }
 

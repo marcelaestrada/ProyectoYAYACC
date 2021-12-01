@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Escritorio\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj": {}
+    "C:\\Users\\carlo\\Desktop\\Datos\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj": {}
   },
   "projects": {
-    "D:\\Escritorio\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj": {
+    "C:\\Users\\carlo\\Desktop\\Datos\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Escritorio\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj",
+        "projectUniqueName": "C:\\Users\\carlo\\Desktop\\Datos\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj",
         "projectName": "proyectoCompis",
-        "projectPath": "D:\\Escritorio\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj",
-        "packagesPath": "C:\\Users\\herma\\.nuget\\packages\\",
-        "outputPath": "D:\\Escritorio\\ProyectoYAYACC\\proyectoCompis\\obj\\",
+        "projectPath": "C:\\Users\\carlo\\Desktop\\Datos\\ProyectoYAYACC\\proyectoCompis\\proyectoCompis.csproj",
+        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carlo\\Desktop\\Datos\\ProyectoYAYACC\\proyectoCompis\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Program Files\\VisualStudio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\herma\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -60,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
