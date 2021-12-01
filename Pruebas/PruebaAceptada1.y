@@ -1,8 +1,8 @@
 edwin : url | 'edwin' | urlds 'mar   cel  a$%!"""#!' ;
 
-leonardo : 'edwin' | mister ;
+leonardo : 'edwin' | mister | '\'' '\t' '\n' '\\' ;
 
-marcela : edwin | 'margarita' ;
+marcela : edwin | 'margarita' | '&\'' '';
 
 marce : 'edwin' leonardo |
 

@@ -54,6 +54,29 @@ namespace proyectoCompis
                     case '\t':
                     break;
 
+                    case '\\':
+                        char validar45 = Convert.ToChar(cadenaValidar.Substring((i + 1), 1));
+                        switch (validar45)
+                        {
+                            case 'n':
+                                entero.Append('\n');
+                                break;
+                            case '\'':
+                                entero.Append('\'');
+                                break;
+                            case '\\':
+                                entero.Append('\\');
+                                break;
+                            case '\t':
+                                entero.Append('\t');
+                                break;
+                                
+                            default:
+                                break;
+                        }
+                        i++;
+                        break;
+                        
                     case ':':
                         if (abierto)
                         {
