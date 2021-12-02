@@ -49,6 +49,31 @@ namespace proyectoCompis
                         }
                         break;
                     case '\n':
+                        if (abierto)
+                        {
+                            entero.Append(item);
+                        }
+                        else if (cadena.Length != 0)
+                        {
+                            Scanner scanner = new Scanner(cadena.ToString());
+                            string[] result = scanner.GetToken();
+                            tokens.Add(new Token(result[0], result[1]));
+                            cadena.Clear();
+                        }
+
+                        break;
+                    case '\r':
+                        if (abierto)
+                        {
+                            entero.Append(item);
+                        }
+                        else if (cadena.Length != 0)
+                        {
+                            Scanner scanner = new Scanner(cadena.ToString());
+                            string[] result = scanner.GetToken();
+                            tokens.Add(new Token(result[0], result[1]));
+                            cadena.Clear();
+                        }
 
                         break;
                     case '\t':
@@ -95,6 +120,14 @@ namespace proyectoCompis
                         {
                             entero.Append(item);
                         }
+                        else if (cadena.Length != 0)
+                        {
+                            Scanner scanner = new Scanner(cadena.ToString());
+                            string[] result = scanner.GetToken();
+                            tokens.Add(new Token(result[0], result[1]));
+                            cadena.Clear();
+                            tokens.Add(Token.SEMICOLON);
+                        }
                         else
                         {
                             tokens.Add(Token.SEMICOLON);
@@ -113,14 +146,20 @@ namespace proyectoCompis
                         
                         break;
                     case '\'':
-                        if (Convert.ToChar(cadenaValidar.Substring((i+1),1)) == ' ' || Convert.ToChar(cadenaValidar.Substring((i + 1), 1)) == ';')
+                        if (Convert.ToChar(cadenaValidar.Substring((i+1),1)) == ' ' || Convert.ToChar(cadenaValidar.Substring((i + 1), 1)) == ';' )
                         {
+                            
                             if (abierto)
                             {
                                 abierto = false;
                                 entero.Append(item);
                                 tokens.Add(new Token("Terminal", entero.ToString()));
                                 entero.Clear();
+                            }
+                            else
+                            {
+                                abierto = true;
+                                entero.Append(item);
                             }
                             
                         }
